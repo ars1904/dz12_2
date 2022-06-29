@@ -5,6 +5,9 @@ import json
 
 url = 'https://api.hh.ru/vacancies'
 
+where = input('Где искать вакансию?')
+query_string = input('Строка запроса?')
+
 params = {
     'text': 'NAME:("python developer")',
     "id":"1",
@@ -46,7 +49,6 @@ for i in list_1:
      })
 
 pprint.pprint(requirements)
-
 
 with open('data.txt', 'w') as outfile:
     json.dump(requirements, outfile)
